@@ -158,26 +158,14 @@ public class SensorServer {
 //    			centeredRoll = orientation[1];
     		}
     		
-		    //orientation[2] += 1.5707963267948966192313216916398;
 		    orientation[0] -= centeredYaw;
-//		    if (orientation[0] > 180)
-//		    	orientation[0] = 360 - orientation[0];
-//		    orientation[2] -= centeredPitch + 1.5707963267948966192313216916398;
-//		    orientation[1] -= centeredRoll;
 
-    		if (reset){
-    			reset = false;
-    			//System.out.println("Before " + centeredValues[0] + " " + centeredValues[1] + " " + centeredValues[2]);
-    			centeredYaw = orientation[0];
-//    			centeredPitch = orientation[2];
-//    			centeredRoll = orientation[1];
-    		}
     		//System.out.println((orientation[0] * TO_DEG));
     		float yaw = (float)(orientation[0] * TO_DEG);
 		    if (yaw > 180)
 		    	yaw -= 360;
     		
-		    deliverer.addData(new float[]{0,0,0, (float)(orientation[0] * TO_DEG), (float)(orientation[1] * TO_DEG), (float)(orientation[2] * TO_DEG)});
+		    deliverer.addData(new float[]{0,0,0, yaw, (float)(orientation[1] * TO_DEG), (float)(orientation[2] * TO_DEG)});
 		    //deliverer.addData(new float[]{0,0,0, (float)(orientation[1] * TO_DEG), (float)(orientation[2] * TO_DEG), (float)(orientation[0] * TO_DEG)});
 		}
 
