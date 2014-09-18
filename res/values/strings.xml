@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OpenTrackClient</string>
+    <string name="labelIpAddress">Host IP</string>
+    <string name="hintIpAddress">192.168.0.42</string>
+    <string name="labelPort">Host Port</string>
+    <string name="hintPort">5555</string>
+    <string name="streamData">Stream Head Tracking</string>
+    <string name="stopButton">STOP</string>
+    <string name="startButton">START</string>
+    <string name="trinusPromote">Would you like to enjoy a complete Virtual Reality experience?\nClick to try Trinus Gyre!</string>
+
+</resources>

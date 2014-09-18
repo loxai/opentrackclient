@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="13dp"
+        android:text="@string/labelIpAddress"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/label"
+        android:textColorHint="@color/label" />
+
+    <EditText
+        android:id="@+id/ipAddressEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hintIpAddress"
+        android:textColorLink="@color/label" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/portEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ipAddressEditText"
+        android:layout_below="@+id/ipAddressEditText"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hintPort"
+        android:inputType="number"
+        android:textColorLink="@color/label" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/portEditText"
+        android:layout_alignBottom="@+id/portEditText"
+        android:layout_alignLeft="@+id/textView1"
+        android:text="@string/labelPort"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/label"
+        android:textColorHint="@color/label" />
+
+    <ImageView
+        android:id="@+id/trinusImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="90dp"
+        android:src="@drawable/mini"
+        android:scaleX="0.9"
+        android:scaleY="0.9"/>
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/portEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:text="@string/streamData"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/label"
+        android:textColorHint="@color/label" />
+
+    <ToggleButton
+        android:id="@+id/streamToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/toggle"
+        android:textOff="@string/startButton"
+        android:textOn="@string/stopButton" />
+
+    <TextView
+        android:id="@+id/trinusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/trinusImage"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/trinusImage"
+        android:text="@string/trinusPromote"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/label" />
+
+</RelativeLayout>
